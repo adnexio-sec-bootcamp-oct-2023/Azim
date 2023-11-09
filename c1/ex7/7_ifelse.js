@@ -1,4 +1,3 @@
-// Assign a random score between 0 and 100
 //var score = Math.floor(Math.random() * 101);
 var score = 99;
 
