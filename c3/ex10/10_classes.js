@@ -52,7 +52,7 @@ console.log(vehicle1.displayDetails());
 console.log(vehicle2.displayDetails());
 console.log(car1.displayDetails());
 
+// Comment to add commit
 const currentYear = new Date().getFullYear();
 console.log(`Car1 Age: ${car1.calculateAge(currentYear)}`);
-
 console.log(`Number of vehicle instances created: ${Vehicle.getInstanceCount()}`);
