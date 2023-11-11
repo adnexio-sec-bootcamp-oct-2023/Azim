@@ -1,4 +1,9 @@
-// Original function using a callback pattern
+/*
+Create a function that uses a callback pattern. Then, wrap this function in another one that returns a promise. 
+Demonstrate how the original callback function can now be used with both callback pattern and promise pattern, 
+thanks to the wrapper.
+*/
+
 function fetchDataWithCallback(callback) {
     setTimeout(() => {
       const data = 'Data from callback function';
@@ -6,7 +11,6 @@ function fetchDataWithCallback(callback) {
     }, 1000);
   }
   
-  // Wrapper function that returns a Promise
   function fetchDataWithPromise() {
     return new Promise((resolve, reject) => {
       fetchDataWithCallback((error, data) => {
@@ -19,7 +23,6 @@ function fetchDataWithCallback(callback) {
     });
   }
   
-  // Usage with callback pattern
   fetchDataWithCallback((error, data) => {
     if (error) {
       console.error('Callback pattern error:', error);
@@ -28,7 +31,6 @@ function fetchDataWithCallback(callback) {
     }
   });
   
-  // Usage with Promise pattern
   fetchDataWithPromise()
     .then((data) => {
       console.log('Promise pattern data:', data);
